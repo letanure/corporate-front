@@ -1,0 +1,31 @@
+# OsX
+.DS_Store
+*/.DS_Store
+
+._*
+.Spotlight-V100
+.Trashes
+.psd
+app/assets/images/layout
+.docs
+
+# Sublime
+*.sublime-project
+*.sublime-workspace
+
+# nodejs npm modules
+/node_modules
+
+# SASS
+.sass-cache/
+
+# Bower
+app/vendor/bower_components/
+
+# Build
+build/
+
+Vagrantfile
+
+# Logs
+*.log
