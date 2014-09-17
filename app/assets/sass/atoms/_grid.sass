@@ -1,0 +1,42 @@
+.container
+  width: 100%
+  margin: 0 auto
+  @each $breakpoint in $breakpoints
+    +mediaquerieMin(nth($breakpoint, 1))
+      width: map-get($breakpointsWidths, nth($breakpoint, 1))
+
+.row
+  position: relative
+  &:after
+    content: ""
+    display: table
+    clear: both
+  [class*="col-"]
+    float: left
+    display: block
+
+.row-margin
+  margin-bottom: 15px
+
+.col-pad
+  [class*="col-"]
+    padding-left: 15px
+    padding-right: 15px
+
+.no-padding.no-padding
+  padding: 0
+
+@each $breakpoint in $breakpoints
+  $breakpointName: nth($breakpoint,1)
+
+  @for $columnNumber from 1 through $columns
+    .col-#{$columnNumber}
+      width: ( 100% / $columns ) * $columnNumber
+
+  @for $columnNumber from 1 through $columns
+    +mediaquerieMin($breakpointName)
+      .col-#{$breakpointName}-#{$columnNumber}
+        width: ( 100% / $columns ) * $columnNumber
+        // width: ( map-get($breakpointsWidths, $breakpointName) / $columns ) * $columnNumber
+      .col-#{$breakpointName}-offset-#{$columnNumber}
+        margin-left: ( 100% / $columns ) * $columnNumber

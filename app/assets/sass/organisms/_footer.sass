@@ -1,0 +1,37 @@
+.footer
+  background: $colorGrayDark
+  color: $colorGrayLight
+
+  hr
+    border: none
+    border-top: 2px solid lighten($colorGrayDark, 7%)
+    border-bottom: 1px solid darken($colorGrayDark, 2%)
+
+  p
+    font-weight: 100
+
+  a
+    &:active,
+    &:visited
+      color: $colorGrayLight
+
+    &:hover
+      text-decoration: none
+
+  &-legal
+    padding: 20px 0
+
+  .expand-nav
+    &-title
+      color: #fff
+
+  .countries
+    background-color: #323232
+
+    .container
+      background: url('../images/icons/world-tile.png') no-repeat center right
+      background-size: contain
+
+  .copyright
+    &-text
+      color: #bdbdbd

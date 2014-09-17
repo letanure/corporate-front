@@ -1,0 +1,109 @@
+.primary
+  color: $colorPrimary
+
+.danger
+  color: $colorDanger
+
+.info
+  color: $colorInfo
+
+.button
+  @extend button
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease
+  color: #fff
+
+  &.disabled, &[disabled]
+    cursor: not-allowed
+    box-shadow: inset 0 0  0 0 $colorPrimary
+
+  &.blue
+    background-color: $colorBlueDark
+    border: 1px solid $colorBlueDark
+    box-shadow: inset 0 0  0 0 $colorBlue
+    &:active, &.active, &:focus, &:hover:focus
+      background-color: $colorBlueLight
+      box-shadow: inset 0px 2px  0px 0px $colorBlueDark
+    &:hover, &.hover
+      background-color: $colorBlue
+      box-shadow: inset 0px -2px  0px 0px $colorBlueDark
+    &.disabled, &[disabled]
+      background-color: $colorBlueLight
+      border-color: $colorBlue
+
+  &.yellow
+    color: $colorGrayDark
+    background-color: $colorYellow
+    border: 1px solid $colorYellow
+    box-shadow: inset 0 0  0 0 $colorYellow
+    &:active, &.active, &:focus, &:hover:focus
+      background-color: $colorYellowDark
+      box-shadow: inset 0px 2px  0px 0px $colorYellowLight
+    &:hover, &.hover
+      background-color: $colorYellow
+      box-shadow: inset 0px -2px  0px 0px $colorYellowLight
+    &.disabled, &[disabled]
+      background-color: $colorYellowDark
+      border-color: $colorYellow
+
+  &.primary
+    background-color: $colorPrimary
+    border: 1px solid darken($colorPrimary, 10%)
+    box-shadow: inset 0 0  0 0 $colorPrimary
+    &:active, &.active, &:focus, &:hover:focus
+      background-color: $colorPrimaryClick
+      box-shadow: inset 0px 2px  0px 0px darken($colorPrimary, 10%)
+    &:hover, &.hover
+      background-color: $colorPrimaryHover
+      box-shadow: inset 0px -2px  0px 0px darken($colorPrimary, 10%)
+    &.disabled, &[disabled]
+      background-color: mix($colorPrimary, #fff, 30%)
+      border-color: mix($colorPrimary, #fff, 50%)
+      box-shadow: inset 0 0  0 0 $colorPrimary
+
+  &.secondary
+    background-color: $colorSecondary
+    border: 1px solid $baseGray
+    color: $baseGray
+    box-shadow: inset 0 0  0 0 $colorSecondary
+    &:active, &.active, &:focus, &:hover:focus
+      background-color: $colorSecondaryClick
+      box-shadow: inset 0px 2px  0px 0px $baseGray
+    &:hover, &.hover
+      background-color: $colorSecondaryHover
+      box-shadow: inset 0px -2px  0px 0px $baseGray
+    &.disabled, &[disabled]
+      background-color: mix($colorSecondary, #fff, 30%)
+      border-color: mix($baseGray, #fff, 50%)
+      box-shadow: inset 0 0  0 0 $baseGray
+
+
+  &.danger
+    background-color: $colorDanger
+    border: 1px solid darken($colorDanger, 10%)
+    box-shadow: inset 0 0  0 0 $colorDanger
+    &:active, &.active, &:focus, &:hover:focus
+      background-color: $colorDangerClick
+      box-shadow: inset 0px 2px  0px 0px darken($colorDanger, 10%)
+    &:hover, &.hover
+      background-color: $colorDangerHover
+      box-shadow: inset 0px -2px  0px 0px darken($colorDanger, 10%)
+    &.disabled, &[disabled]
+      background-color: mix($colorDanger, #fff, 30%)
+      border-color: mix($colorDanger, #fff, 50%)
+      box-shadow: inset 0 0  0 0 $colorDanger
+
+  &.info
+    background-color: $colorInfo
+    border: 1px solid darken($colorInfo, 10%)
+    box-shadow: inset 0 0  0 0 $colorInfo
+    &:active, &.active, &:focus, &:hover:focus
+      background-color: $colorInfoClick
+      box-shadow: inset 0px 2px  0px 0px darken($colorInfo, 10%)
+    &:hover, &.hover
+      background-color: $colorInfoHover
+      box-shadow: inset 0px -2px  0px 0px darken($colorInfo, 10%)
+    &.disabled, &[disabled]
+      background-color: mix($colorInfo, #fff, 30%)
+      border-color: mix($colorInfo, #fff, 50%)
+      box-shadow: inset 0 0  0 0 $colorInfo
+

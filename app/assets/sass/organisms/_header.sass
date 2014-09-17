@@ -1,0 +1,36 @@
+$headerHeight: 55px
+
+.header
+  background-color: $colorWhite
+  border-bottom: 2px solid $colorBlueLight
+  height: $headerHeight
+
+  .logo
+    @extend .text-hide
+    background-position: 5px center
+    background-size: 150px 44px
+    height: $headerHeight
+
+  .text-h5
+    font-weight: 400
+    padding-top: 10px
+    text-align: center
+
+  p:nth-child(2)
+    font-weight: 300
+    margin-top: -4px
+    text-align: center
+
+  .box
+    @extend h6
+    border: 1px solid $colorGrayLight
+    color: $colorGrayRegular
+    font-weight: 300
+    height: 35px
+    line-height: 35px
+    margin: 10px 0
+    text-align: center
+    text-decoration: none
+    &:before
+      color: $colorRed
+

@@ -1,0 +1,57 @@
+[class*="box"]
+  background-color: #fff
+  color: $colorGrayRegular
+  border: 1px solid $colorGrayRegular
+  // padding: 15px 15px 15px 10px
+  width: 100%
+  display: block
+
+[class*="box"]
+
+.box-primary
+  border-color: $colorPrimary
+
+.box-bg-primary
+  @extend .box-primary
+  color: $colorPrimary
+  background-color: mix($colorPrimary, #fff, 15%)
+
+.box-left-primary
+  border: 1px solid #fff
+  border-left: 5px solid $colorPrimary
+
+.box-info
+  border-color: $colorInfo
+
+.box-bg-info
+  @extend .box-info
+  color: $colorInfo
+  background-color: mix($colorInfo, #fff, 15%)
+
+.box-left-info
+  border: 1px solid #fff
+  border-left: 5px solid $colorInfo
+
+.box-danger
+  border-color: $colorDanger
+
+.box-bg-danger
+  @extend .box-danger
+  color: $colorDanger
+  background-color: mix($colorDanger, #fff, 15%)
+
+.box-left-danger
+  border: 1px solid #fff
+  border-left: 5px solid $colorDanger
+
+.box-secondary
+  border-color: $colorGrayRegular
+
+.box-bg-secondary
+  @extend .box-secondary
+  color: $colorGrayRegular
+  background-color: mix($colorGrayRegular, #fff, 15%)
+
+.box-left-secondary
+  border: 1px solid #fff
+  border-left: 5px solid $colorGrayRegular

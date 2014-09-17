@@ -1,0 +1,49 @@
+.carousel
+  position: relative
+
+  &-items
+    height: 412px
+    margin: 0
+    min-width: 100%
+    padding: 0
+    position: relative
+
+  &-item
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100%
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    text-align: center
+    transition: opacity .5s
+    width: 100%
+
+    &.is-active
+      opacity: 1
+
+  &-nav
+    bottom: 10px
+    display: inline-block
+    list-style: none
+    margin: 0
+    padding: 0
+    position: absolute
+    right: 20px
+
+  &-nav-item
+    border-radius: 50%
+    border: 1px solid rgba(255, 255, 255, .5)
+    cursor: pointer
+    display: inline-block
+    height: 15px
+    margin-right: 7px
+    overflow: hidden
+    text-indent: -1em
+    transition: background .5s
+    width: 15px
+
+    &.is-active
+      background-color: rgba(255, 255, 255, .7)
+

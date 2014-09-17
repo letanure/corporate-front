@@ -1,0 +1,46 @@
+$subscribe-height: 50px
+
+.subscribe
+  background: $colorGrayDark
+
+  &-content
+    padding: 0 $subscribe-height
+
+  &-label
+    color: #fff
+    font-size: 18px
+    font-weight: 400
+    text-transform: uppercase
+    line-height: 40px
+
+  &-input
+    width: 100%
+    padding: 6px 14px
+
+  .button
+    height: 40px
+    line-height: 40px
+
+  [class*=col-]
+    padding: 5px
+
+  .container
+    position: relative
+    height: $subscribe-height
+    background-color: #323232
+
+    &:before,
+    &:after
+      content: ' '
+      border: ($subscribe-height / 2) solid transparent
+      height: 100%
+      display: block
+      position: absolute
+      top: 0
+
+    &:before
+      border-left-color: $colorGrayDark
+
+    &:after
+      border-right-color: $colorGrayDark
+      right: 0

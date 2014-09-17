@@ -1,0 +1,22 @@
+%list-unstyled
+  margin: 0
+  padding: 0
+  list-style: none
+
+.list-inline
+  @extend %list-unstyled
+
+  li
+    display: inline-block
+    margin: 0 5px 10px
+
+  img
+    max-width: 100%
+
+.list-img-grayscale
+  img
+    @extend .img-grayscale
+
+.list-img-border
+  img
+    @extend .img-border

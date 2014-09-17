@@ -1,0 +1,45 @@
+.widget
+  
+  // Top Destinations
+  &-top-destinations
+    
+    &-block
+      border: 1px solid #ccc
+
+    h2, h3
+      text-align: center
+
+  // Weather
+  &-weather
+    border: 1px solid $colorWidgetBorder
+    height: 123px
+    margin: 0 auto
+    position: relative
+    width: 520px
+
+    .overlay
+      background: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+      background:    -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+      background:     -ms-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+      background:      -o-linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+      background:         linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0))
+      height: 123px
+      width: 518px
+
+    &-data
+      bottom: 0
+      color: #fff
+      padding: 0 10px
+      position: absolute
+
+    &-icon
+      font-size: 18px
+      margin: 0 0 0 5px
+
+    &-temp
+      font: 100 65px 'Roboto'
+      font-weight: 100
+
+      &:after
+        font: normal 40px/1 ' weathericons'
+        position: absolute

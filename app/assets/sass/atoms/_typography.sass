@@ -1,0 +1,55 @@
+// @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700)
+
+%font-primary, [class*="font-primary"]
+  font-family: 'Roboto', Arial, "Helvetica Neue", Helvetica, sans-serif
+
+%font-secondary, [class*="font-secondary"]
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+
+%font-monospaced, [class*="font-monospaced"]
+  font-family: Consolas, monaco, monospace
+
+body
+  @extend %font-primary
+  font-size: 16px
+
+.text
+  &-h1
+    @extend h1
+  &-h2
+    @extend h2
+  &-h3
+    @extend h3
+  &-h4
+    @extend h4
+  &-h5
+    @extend h5
+  &-h6
+    @extend h6
+  &-lowercase
+    text-transform: lowercase
+  &-uppercase
+    text-transform: uppercase
+  &-capitalize
+    text-transform: capitalize
+
+
+[class*="italic"]
+  font-style: italic
+
+[class*="bold"]
+  font-weight: 600
+
+.text-left
+  text-align: left
+
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-hide
+  font: 0/0 a
+  color: transparent
+  text-shadow: none

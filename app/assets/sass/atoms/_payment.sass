@@ -1,0 +1,19 @@
+// Avaliable logos
+// amazon  american-express  cirrus      diners-club    direct-debit
+// jcb     maestro           mastercard  paypal         sage
+// solo    visa-electron     visa        western-union  worldpay
+// skrill  solo-symbol       eway        google-wallet  skrill-moneybookers
+// shopify ebay              discover
+
+$usedPayments: "mastercard", "visa", "diners-club", "paypal", "visa-electron", "boleto"
+
+[class*="payment-logo-"]
+  background-size: cover
+  color: transparent
+  background-repeat: no-repeat
+  background-position: center
+  text-decoration: none
+
+@each $method in $usedPayments
+  .payment-logo-#{$method}
+    background-image: url("../images/payment/#{$method}.png")

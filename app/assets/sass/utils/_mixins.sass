@@ -1,0 +1,75 @@
+// media queries
+=mediaquerieMin($breakpoint)
+  $value: map-get($breakpoints, $breakpoint)
+  @if $value != null
+    @media (min-width: $value)
+      @content
+
+=mediaquerieMax($breakpoint)
+  $value: map-get($breakpoints, $breakpoint)
+  @if $value != null
+    @media (max-width: $value)
+      @content
+
+// Sizes
+=size($width: 0, $height: 0, $display: block)
+  display: $display
+  width: $width
+  height: $height
+
+=square($size: 0)
+  +size($size, $size)
+
+=circle($size: 0)
+  +square($size)
+  border-radius: $size
+
+// Position Absolute
+
+=positionTopLeft($top:0, $left: 0)
+  position: absolute
+  top: $top
+  left: $left
+
+=positionTopRight($top:0, $right: 0)
+  position: absolute
+  top: $top
+  right: $right
+
+=positionBottomLeft($bottom:0, $left: 0)
+  position: absolute
+  bottom: $bottom
+  left: $left
+
+=positionBottomRight($bottom:0, $right: 0)
+  position: absolute
+  bottom: $bottom
+  right: $right
+
+// Fonts
+
+=font-size($sizeValue: 1.6)
+  @if $supportIe8
+    font-size: ($sizeValue * 16) + px
+  font-size: $sizeValue + rem
+
+@function strip-unit($num)
+  @return $num / ($num * 0 + 1)
+
+=rem($property, $values...)
+  $max: length($values)
+  $pxValues: ''
+  $remValues: ''
+  @for $i from 1 through $max
+    $value: strip-unit(nth($values, $i))
+    $pxValues: #{$pxValues + $value*16}px
+    @if $i < $max
+      $pxValues: #{$pxValues + " "}
+  @for $i from 1 through $max
+    $value: strip-unit(nth($values, $i))
+    $remValues: #{$remValues + $value}rem
+    @if $i < $max
+      $remValues: #{$remValues + " "}
+  @if $supportIe8
+    #{$property}: $pxValues
+  #{$property}: $remValues

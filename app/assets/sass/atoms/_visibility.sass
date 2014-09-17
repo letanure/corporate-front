@@ -1,0 +1,14 @@
+// [class*="invisible"]
+//   display: none
+
+@each $breakpoint in $breakpoints
+  $breakpointName: nth($breakpoint,1)
+  +mediaquerieMin($breakpointName)
+    .hidden-#{$breakpointName}
+      display: none
+    .display-block-#{$breakpointName}
+      display: block
+    .display-inline-#{$breakpointName}
+      display: inline
+    .display-inline-block-#{$breakpointName}
+      display: inline-block

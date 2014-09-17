@@ -1,0 +1,139 @@
+//
+//
+// General Reset & Normalize
+//
+//
+
+html
+  // +font-smoothing(antialiased)
+  background-color: $colorWhite
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+html, button, input, select, textarea
+  color: $colorGrayRegular
+
+body
+  font-size: 14px
+  line-height: 1.4
+  margin: 0
+  padding: 0
+
+img
+  vertical-align: middle
+
+//
+//
+// Typography
+//
+//
+h1, h2, h3, h4, h5, h6
+  font-weight: 500
+  margin: 0
+  padding: 0
+
+h1
+  font-size: 21px
+h2
+  font-size: 20px
+h3
+  font-size: 19px
+h4
+  font-size: 18px
+h5
+  font-size: 16px
+h6
+  font-size: 15px
+p
+  font-size: 14px
+  margin: 0
+
+a
+  color: $colorBlue
+  &:visited, &:active
+    color: $colorBlueDark
+  &:hover, &:focus
+    color: $colorBlueLight
+
+abbr, acronym
+  border: 0
+  font-variant: normal
+
+pre, code, tt
+  font: 1em/1.5em 'Andale Mono', 'Lucida Console', monospace
+
+address, caption, cite, code, dfn, em, strong, th, var
+  font-style: normal
+  font-weight: normal
+
+//
+//
+// Lists
+//
+//
+ul, ol, dl
+  padding: 0 0 0 2em
+
+//
+//
+// Tables
+//
+//
+table
+  border-collapse: collapse
+  border-spacing: 0
+  th
+    text-align: left
+
+//
+//
+// Forms
+//
+//
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
+textarea
+  resize: vertical
+
+input, textarea, select
+  font-family: inherit
+  font-size: inherit
+  font-weight: inherit
+
+input, textarea, select
+  *font-size: 100%
+
+button
+  +rem(font-size ,  1)
+  +rem(line-height,  2.8)
+  background: $colorGrayMedium
+  border-radius: 2px
+  border: 1px solid $colorGrayRegular
+  color: #000
+  cursor: pointer
+  display: inline-block
+  margin: 0
+  padding: 0
+  text-align: center
+  text-decoration: none
+  transition: background-color 0.3s ease
+  width: 100%
+  &:focus, &:focus:hover
+    outline: none
+    box-shadow: inset 0px 2px  0px 0px $colorGrayRegular
+  &:hover
+    background: $colorGrayDark
+    box-shadow: inset 0px -2px  0px 0px $colorGrayMedium
+  &[disabled]
+    background: $colorGrayLight
+    cursor: not-allowed
+    &:hover
+      box-shadow: inset 0px 0px  0px 0px $colorGrayMedium
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak
+  display: none
