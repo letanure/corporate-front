@@ -1,0 +1,13 @@
+cbApp:
+  head:
+    language: 'pt-br'
+    name: 'clickbus brasil'
+    domain: 'http://clickbus.com.br'
+    description: 'description brasil'
+  images:
+    logo: 'clickbus'
+  api:
+    home: 'http://www.mocky.io/v2/54173fc47f62a504163bbfe1'
+    page1: 'http://www.google.com.br'
+    page2: 'http://www.yahoo.com.br'
+

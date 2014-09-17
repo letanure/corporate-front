@@ -1,0 +1,8 @@
+cbApp:
+  head:
+    language: 'tr'
+    domain: 'http://clickbus.com.br'
+    name: "clickbus turkeys"
+    description: 'description turkey'
+  images:
+    logo: 'tikobus'

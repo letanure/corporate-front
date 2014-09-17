@@ -1,0 +1,8 @@
+cbApp:
+  head:
+    language: 'es-mx'
+    domain: 'http://clickbus.com.br'
+    name: "clickbus mexico"
+    description: 'description mexico'
+  images:
+    logo: 'clickbus'

@@ -1,0 +1,8 @@
+cbApp:
+  head:
+    language: 'en'
+    domain: 'http://clickbus.com.br'
+    name: "name default"
+    description: 'description default'
+  images:
+    logo: 'clickbus'
